@@ -158,7 +158,7 @@
     litemdview
     orca-slicer
     drawio
-    repath-studio
+    # repath-studio
     # graphite
     slint-lsp
     # vivaldi
@@ -174,6 +174,6 @@
     kicad
   ] ++ (with pkgs-unstable; [
     amnezia-vpn
-    graphite
+    # graphite
   ]);
 }
