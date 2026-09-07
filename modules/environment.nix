@@ -30,13 +30,13 @@
 	  cls-alpha-main = "ssh main@clorine.ru";
 	  cls-alpha-nd1 = "ssh nd1@clorine.ru";
 	  cls-beta-main = "ssh main@10.34.10.94";
-	  reboot = "pkill brave; sleep 0.5 && reboot";
-	  poweroff = "pkill brave; sleep 0.5 && poweroff";
+	  # reboot = "pkill brave; sleep 0.5 && reboot";
+	  # poweroff = "pkill brave; sleep 0.5 && poweroff";
 	  timer = "bettertimer";
 	  power = "upower -b | grep %";
-	  # reboot = "pkill brave; su -c \"sleep 0.5 && efibootmgr -n 2 && reboot\"";
-	  # poweroff = "pkill brave; su -c \"sleep 0.5 && efibootmgr -n 2 && poweroff\"";
-	  # swap = "su -c \"efibootmgr -n 3 && reboot\"";
+	  reboot = "pkill brave; su -c \"sleep 0.5 && efibootmgr -n 2 && reboot\"";
+	  poweroff = "pkill brave; su -c \"sleep 0.5 && efibootmgr -n 2 && poweroff\"";
+	  swap = "su -c \"efibootmgr -n 3 && reboot\"";
   };
   # Переменная окружения, которая может помочь некоторым X11-приложениям
   environment.sessionVariables = {
