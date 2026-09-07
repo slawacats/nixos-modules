@@ -16,10 +16,6 @@
 	  crr = "cargo run --release";
 	  cb = "cargo build";
 	  cbr = "cargo build --release";
-	  fr = "flutter run";
-	  frr = "flutter run --release";
-	  fb = "flutter build";
-	  fbr = "flutter build --release";
 	  t = "tmux new-session -A -D -s main";
 	  nr-switch = "sudo nixos-rebuild switch --flake /etc/nixos";
 	  nr-boot = "sudo nixos-rebuild boot --flake /etc/nixos";
@@ -38,6 +34,9 @@
 	  poweroff = "pkill brave; sleep 0.5 && poweroff";
 	  timer = "bettertimer";
 	  power = "upower -b | grep %";
+	  # reboot = "pkill brave; su -c \"sleep 0.5 && efibootmgr -n 2 && reboot\"";
+	  # poweroff = "pkill brave; su -c \"sleep 0.5 && efibootmgr -n 2 && poweroff\"";
+	  # swap = "su -c \"efibootmgr -n 3 && reboot\"";
   };
   # Переменная окружения, которая может помочь некоторым X11-приложениям
   environment.sessionVariables = {

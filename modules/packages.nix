@@ -22,6 +22,7 @@
     kdePackages.ark
     kdePackages.kolourpaint
     kdePackages.kdeconnect-kde
+    kdePackages.kdenlive
 
     # --------- TextEditors
     obsidian
@@ -168,8 +169,11 @@
     uchess
     stockfish
     gnuchess
+    efibootmgr
+    blender
+    kicad
   ] ++ (with pkgs-unstable; [
     amnezia-vpn
-    # graphite
+    graphite
   ]);
 }
