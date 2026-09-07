@@ -91,10 +91,10 @@
     krita
 
     # --------- Dev
-    # rustc
-    # cargo
-    rustup
-    # rust-analyzer
+    rustc
+    cargo
+    # rustup
+    rust-analyzer
     cargo-dist
     zig
     gcc
