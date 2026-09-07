@@ -1,8 +1,6 @@
 { config, pkgs, pkgs-unstable, lib, inputs, ... }:
 
 {
-  networking.hostName = "nixos-nd1-mobile";
-
   networking.networkmanager.enable = true;
   networking.networkmanager.wifi.backend = "iwd";
   
