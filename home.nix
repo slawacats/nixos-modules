@@ -1,4 +1,4 @@
-
+{config, pkgs, ...}:
 
 {
   home.username = "nd1";
@@ -49,4 +49,6 @@
   home.sessionVariables = {
     PATH = "$HOME/go/bin:$PATH";
   };
+
+  home.stateVersion = "25.11";
 }
