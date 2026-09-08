@@ -31,7 +31,10 @@
 	  reboot = "pkill brave; sleep 0.5 && reboot";
 	  poweroff = "pkill brave; sleep 0.5 && poweroff";
 	  timer = "bettertimer";
-	  power = "upower -b | grep %";
+	  power = "
+	    upower -b | grep percentage
+	    upower -b | grep state
+	    ";
   };
   
   environment.sessionVariables = {
