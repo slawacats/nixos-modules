@@ -12,10 +12,10 @@
   systemd.user.services.netstatutil = {
     enable = true;
     description = "Internet Analytics";
-    after = [ "network.target" "graphical-session.target" ];
-    wants = [ "network.target"];
-    requires = [ "network.target" ];
-    wantedBy = [ "graphical-session.target" ];
+    after = [ "network-online.target" "graphical-session.target" ];
+    # wants = [ "network-online.target"];
+    # requires = [ "network-online.target" ];
+    # wantedBy = [ "graphical-session.target" ];
     serviceConfig = {
       Type = "simple";
       ExecStart = "/home/nd1/.local/bin/netstatutil";
