@@ -37,6 +37,7 @@
           ./configuration.nix
           (nixos-modules + "/modules/node.nix")
           (nixos-modules + "/specific/nixos-nd1-mobile.nix")
+          ./warthunder.nix
 
   	      { nixpkgs.config.allowUnfree = true; }
 
