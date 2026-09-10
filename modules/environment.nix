@@ -22,6 +22,7 @@
 	  nce = "sudo hx /etc/nixos/configuration.nix --config ~/.config/helix/config.toml";
 	  hce = "sudo hx /etc/nixos/home.nix --config ~/.config/helix/config.toml";
 	  fce = "sudo hx /etc/nixos/flake.nix --config ~/.config/helix/config.toml";
+	  sce = "sudo hx /home/nd1/modules/specific/${HOSTNAME}.nix";
 	  ce = "sudo hx --config ~/.config/helix/config.toml";
 	  ns = "nix-shell";
 	  c = "clear";
