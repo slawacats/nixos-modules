@@ -19,7 +19,7 @@
     };
 
     nixos-modules = {
-      url = "file:/home/nd1/modules";
+      url = "github:slawacats/nixos-modules";
       flake = false;
     };
   };
