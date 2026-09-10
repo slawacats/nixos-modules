@@ -14,5 +14,5 @@
 
   networking.firewall.enable = false;
 
-  # services.openssh.enable = true;
+  services.openssh.enable = true;
 }
