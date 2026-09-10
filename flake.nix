@@ -19,7 +19,7 @@
     };
 
     nixos-modules = {
-      url = "file:/home/nd1/nixos-modules";
+      url = "file:/home/nd1/modules";
       flake = false;
     };
   };

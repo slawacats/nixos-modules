@@ -16,7 +16,7 @@
   systemd.user.services.netstatutil = {
     enable = true;
     description = "Internet Analytics";
-    after = [ "network-online.target" "graphical-session.target" ];
+    after = [ "graphical-session.target" ];
     # wants = [ "network-online.target"];
     # requires = [ "network-online.target" ];
     # wantedBy = [ "graphical-session.target" ];
