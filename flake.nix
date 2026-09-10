@@ -18,15 +18,15 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # nixos-modules = {
-    #   url = "file:/home/nd1/nixos-modules";
-    #   flake = false;
-    # };
-
     nixos-modules = {
-      url = "github:slawacats/nixos-modules";
+      url = "file:/home/nd1/nixos-modules";
       flake = false;
     };
+
+    # nixos-modules = {
+    #   url = "github:slawacats/nixos-modules";
+    #   flake = false;
+    # };
   };
 
   outputs = { self, nixos-modules, nixpkgs, nixpkgs-unstable, home-manager, yandex-browser, ... }@inputs: {
@@ -35,8 +35,8 @@
         system = "x86_64-linux";
         modules = [
           ./configuration.nix
-          (nixos-modules + "/modules/node.nix")
-          (nixos-modules + "/specific/nixos-nd1-mobile.nix")
+          (nixos-modules + "/modules")
+          (nixos-modules + "/specific")
           ./warthunder.nix
 
   	      { nixpkgs.config.allowUnfree = true; }
@@ -58,8 +58,8 @@
         system = "x86_64-linux";
         modules = [
           ./configuration.nix
-          (nixos-modules + "/modules/node.nix")
-          (nixos-modules + "/specific/nixos-nd1.nix")
+          (nixos-modules + "/modules")
+          (nixos-modules + "/specific")
 
   	      { nixpkgs.config.allowUnfree = true; }
 
