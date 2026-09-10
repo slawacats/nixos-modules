@@ -2,6 +2,6 @@
 
 {
   imports = [
-    ./${hostname}.nix
+    ./${config.networking.hostName}.nix
   ];
 }
