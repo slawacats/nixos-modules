@@ -1,6 +1,10 @@
 {config, pkgs, lib, ...}: 
 
 {
+  imports = [
+    ./warthunder.nix
+  ];
+  
   networking.hostName = "nixos-nd1";
   
   environment.shellAliases = {

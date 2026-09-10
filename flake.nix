@@ -31,30 +31,29 @@
 
   outputs = { self, nixos-modules, nixpkgs, nixpkgs-unstable, home-manager, yandex-browser, ... }@inputs: {
     nixosConfigurations = {
-      nixos-nd1-mobile = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [
-          ./configuration.nix
-          (nixos-modules + "/modules")
-          (nixos-modules + "/specific")
-          ./warthunder.nix
+      # nixos-nd1-mobile = nixpkgs.lib.nixosSystem {
+      #   system = "x86_64-linux";
+      #   modules = [
+      #     ./configuration.nix
+      #     (nixos-modules + "/modules")
+      #     (nixos-modules + "/specific")
 
-  	      { nixpkgs.config.allowUnfree = true; }
+  	   #    { nixpkgs.config.allowUnfree = true; }
 
-  	      home-manager.nixosModules.home-manager {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.nd1 = import (nixos-modules + "/home.nix");
-          }
-        ];
-        specialArgs = { inherit inputs;
-          pkgs-unstable = import nixpkgs-unstable {
-            system = "x86_64-linux";
-            config.allowUnfree = true;
-          };
-        };
-      };
-      nixos-nd1 = nixpkgs.lib.nixosSystem {
+  	   #    home-manager.nixosModules.home-manager {
+      #       home-manager.useGlobalPkgs = true;
+      #       home-manager.useUserPackages = true;
+      #       home-manager.users.nd1 = import (nixos-modules + "/home.nix");
+      #     }
+      #   ];
+      #   specialArgs = { inherit inputs;
+      #     pkgs-unstable = import nixpkgs-unstable {
+      #       system = "x86_64-linux";
+      #       config.allowUnfree = true;
+      #     };
+      #   };
+      # };
+      default = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
           ./configuration.nix
