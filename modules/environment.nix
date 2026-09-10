@@ -15,14 +15,14 @@
 	  cb = "cargo build";
 	  cbr = "cargo build --release";
 	  t = "tmux new-session -A -D -s main";
-	  nr-switch = "sudo nixos-rebuild switch --flake /etc/nixos";
-	  nr-boot = "sudo nixos-rebuild boot --flake /etc/nixos";
+	  nr-switch = "sudo nixos-rebuild switch --flake /etc/nixos#default";
+	  nr-boot = "sudo nixos-rebuild boot --flake /etc/nixos#default";
 	  ncg = "sudo nix-collect-garbage -d";
 	  nfu = "sudo nix flake update --flake /etc/nixos";
 	  nce = "sudo hx /etc/nixos/configuration.nix --config ~/.config/helix/config.toml";
 	  hce = "sudo hx /etc/nixos/home.nix --config ~/.config/helix/config.toml";
 	  fce = "sudo hx /etc/nixos/flake.nix --config ~/.config/helix/config.toml";
-	  sce = "sudo hx /home/nd1/modules/specific/${HOSTNAME}.nix";
+	  sce = "sudo hx /home/nd1/modules/specific/${config.networking.hostName}.nix";
 	  ce = "sudo hx --config ~/.config/helix/config.toml";
 	  ns = "nix-shell";
 	  c = "clear";
