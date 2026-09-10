@@ -2,6 +2,6 @@
 
 {
   imports = [
-    ./${config.networking.hostName}.nix
+    ./${builtins.getEnv "HOSTNAME"}.nix
   ];
 }
