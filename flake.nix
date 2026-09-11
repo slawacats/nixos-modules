@@ -31,7 +31,7 @@
         modules = [
           ./configuration.nix
           (nixos-modules + "/modules")
-          (nixos-modules + "/specific")
+          (nixos-modules + "/specific/nixos-nd1.nix")
 
   	      { nixpkgs.config.allowUnfree = true; }
 
